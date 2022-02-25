@@ -1,7 +1,6 @@
 # VAEGAN for airfoil generation
 
 深層生成モデルVAEGANを用いた翼形状生成
-![深層生成モデルVAEGANを用いた翼形状生成](https://user-images.githubusercontent.com/58470212/155640468-0a5afc23-01ea-4d37-92b0-d2afc9d72d38.png)
 
 
 ## Features
