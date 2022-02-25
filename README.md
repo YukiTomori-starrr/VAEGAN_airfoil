@@ -6,7 +6,7 @@
 ## Features
 
 2021年度東京大学工学部卒業研究「Conditional-VAEGANの潜在空間表現力を活かした翼形状生成」で用いた実験ソースコードです。<br>
-詳細はこちらの[卒業論文]()と[卒業研究発表用スライド]()をご覧ください。
+詳細はこちらの[卒業研究発表用スライド](https://github.com/YukiTomori-starrr/VAEGAN_airfoil/files/8137821/_.ver.pdf)をご覧ください。
 
 ## Requirement
 
