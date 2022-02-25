@@ -5,7 +5,7 @@
 
 ## Features
 
-2021年度東京大学工学部卒業研究「Conditional-VAEGANの潜在空間表現力を活かした翼形状生成」で用いたソースコードです。<br>
+2021年度東京大学工学部卒業研究「Conditional-VAEGANの潜在空間表現力を活かした翼形状生成」で用いた実験ソースコードです。<br>
 詳細はこちらの[卒業論文]()と[卒業研究発表用スライド]()をご覧ください。
 
 ## Requirement
@@ -13,9 +13,12 @@
 本研究では、Deep Learning Box Alpha (GDEP製)・GPU: NVIDIA RTX A6000 (48GB memory)を用いています。<br> 
 Anaconda等で仮想環境を構築して実行してください。なお、仮想環境のrequirementは以下です。
 
-* mecab-pythin3 1.0.3
-* oseti 0.2
-* wordcloud 1.8.1
+* python 3.7.
+* pytorch
+* xfoil
+* numpy
+* pandas
+* 
 
 ## Installation
 
@@ -73,6 +76,8 @@ python3 -m wvaegan_gp.latent_eval_nonvector
 
 ### dataset
 翼型訓練データ
+* coords：翼型の点列データセット
+* perfs：翼型に対応する揚力係数データセット
 
 ### vaegan
 通常のConditional VAEGANのモデル定義・訓練・評価
