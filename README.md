@@ -1,6 +1,6 @@
 # VAEGAN for airfoil generation
 
-深層生成モデルVAEGANによる翼形状生成
+深層生成モデルVAEGANを用いた翼形状生成
 
 
 ## Features
@@ -10,7 +10,8 @@
 
 ## Requirement
 
-Anaconda上で仮想環境を構築して実行してください。なお、仮想環境のrequirementは以下です。
+本研究では、Deep Learning Box Alpha (GDEP製)・GPU: NVIDIA RTX A6000 (48GB memory)を用いています。<br> 
+Anaconda等で仮想環境を構築して実行してください。なお、仮想環境のrequirementは以下です。
 
 * mecab-pythin3 1.0.3
 * oseti 0.2
@@ -37,29 +38,34 @@ pip install mecab-python3
 # Usage
 
 代表的なコマンドを以下に記します。
+- 通常のConditional VAEGAN
 ```
-通常のConditional VAEGANの訓練
+#訓練
 python3 -m vaegan.train
 
-通常のconditional VAEGANの評価
+#評価
 python3 -m vaeagan.eval
-
-cWVAEGAN-gp(encoderにラベル情報を与えるver)の訓練
+```
+- cWVAEGAN-gp(encoderにラベル情報を与えるver)
+```
+#訓練
 python3 -m wvaegan_gp.train_vector
 
-cWVAEGAN-gp(encoderにラベル情報を与えるver)の評価
+#評価
 python3 -m wvaegan_gp.eval_vector
 
-cWVAEGAN-gp(encoderにラベル情報を与えるver)の潜在空間の評価
+#潜在空間の評価
 python3 -m wvaegan_gp.latent_eval_vector
-
-cWVAEGAN-gp(encoderにラベル情報を与えないver)の訓練
+```
+- cWVAEGAN-gp(encoderにラベル情報を与えないver)
+```
+#訓練
 python3 -m wvaegan_gp.train_nonvector
 
-cWVAEGAN-gp(encoderにラベル情報を与えないver)の評価
+#評価
 python3 -m wvaegan_gp.eval_nonvector
 
-cWVAEGAN-gp(encoderにラベル情報を与えないver)の潜在空間の評価
+#潜在空間の評価
 python3 -m wvaegan_gp.latent_eval_nonvector
 ```
 
@@ -76,4 +82,4 @@ cWVAEGAN-gpのモデル定義・訓練・評価
 
 # Author
 * 友利優希（Yuki Tomori）
-* tohoshinki1998@g.ecc.u-tokyo.ac.jp
+* 東京大学工学部システム創成学科B4（2022年時点）
