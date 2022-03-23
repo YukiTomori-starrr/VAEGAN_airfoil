@@ -121,7 +121,7 @@ python3 -m vaegan.train
 #評価
 python3 -m vaeagan.eval
 ```
-- cWVAEGAN-gp(encoderにラベル情報を与えるver)
+- cWVAEGAN-gp(encoderにラベル情報を与えるver：提案手法)
 ```
 #訓練
 python3 -m wvaegan_gp.train_vector
@@ -132,6 +132,17 @@ python3 -m wvaegan_gp.eval_vector
 #潜在空間の評価
 python3 -m wvaegan_gp.latent_eval_vector
 ```
+- eval_vectorの使い方
+    - `calc_values(self)`：converge, failure, smoothness, mse, muを算出する関数
+    - `plot_multicoords(self, clc)`：生成翼型を重ねて表示させる関数、形状の多様性の評価時に用いる
+        -  `clc`:生成した重ねたい翼型
+
+- latent_eval_vectorの使い方
+    - `visualize_latentspace(dim=3, latent_vector=mu)`：潜在空間の可視化を行う関数
+         - `dim`：t-sneで可視化する潜在空間の次元数、`dim=2`, `dim=3`など
+         - `latent_vector`：可視化する潜在ベクトル、`latent_vector=mu`,`latent_vector=log_variances`など
+
+
 - cWVAEGAN-gp(encoderにラベル情報を与えないver)
 ```
 #訓練
